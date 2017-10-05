@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(url="http://localhost:8080",name="ItemService")
 public interface ItemRestClient {
   @RequestMapping(value = "/items/{id}", method = RequestMethod.PUT)
-  String updateItem(@PathVariable("id") final Integer id, @RequestBody String request);
+  String updateItem(@PathVariable("id") final String id, @RequestBody String request);
 }
